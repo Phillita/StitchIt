@@ -1,3 +1,51 @@
 <% page_title('Home') %>
 
 <h1>Welcome  <%= "back, #{current_user.name}" if current_user %></h1>
+
+This is text within the body tag.
+
+<p>
+  This is text within a p tag
+</p>
+
+<div class="copy-1">
+  <p>
+    This is text in a p tag, within a div.
+  </p>
+</div>
+
+<div class="copy-2">
+  This is text within a div.
+  <p>
+    This is text within a p tag, within a div.
+  </p>
+</div>
+
+<div class="copy-3">
+  This is text within a div.
+  <p>
+    This is text within a p tag, within a div.
+  </p>
+  <p>
+    <strong>This is bold text within a p tag.</strong>
+  </p>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+        This is a table header
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        This is a table cell
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button id="init-stitch-it" type="button" name="button">Init Stitch It</button>
