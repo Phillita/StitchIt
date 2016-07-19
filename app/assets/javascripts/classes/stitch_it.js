@@ -1,10 +1,10 @@
 function StitchIt() {
   this.containers = [];
+  this.pathname   = window.location.pathname;
+  this.url        = window.location.href;
 
   this.init = function() {
-    this.gatherElements();
-    this.setEscape();
-    this.appendModal();
+    this.gatherElements().setEscape().appendModal();
   };
 
   this.gatherElements = function() {
@@ -15,6 +15,7 @@ function StitchIt() {
       obj.init();
       self.containers.push(obj);
     });
+    return this;
   };
 
   this.setEscape = function() {
@@ -25,6 +26,7 @@ function StitchIt() {
         self.containers = [];
       }
     });
+    return this;
   };
 
   this.appendModal = function() {
@@ -42,5 +44,7 @@ function StitchIt() {
       }
       return false;
     };
+
+    return this;
   };
 }
