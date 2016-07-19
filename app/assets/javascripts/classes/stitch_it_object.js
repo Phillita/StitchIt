@@ -9,11 +9,7 @@ function StitchItObject(container) {
 
   this.setClick = function() {
     var self = this;
-    this.container.on('click', function(e) {
-      self.enhance();
-      return false;
-    });
-
+    this.container.on('click', this.enhance);
     return this;
   };
 
@@ -21,5 +17,9 @@ function StitchItObject(container) {
     $('#stitchItModalContent').text(this.text);
     $('#stitchItModal').css('display', 'block');
     return this;
+  };
+
+  this.destroy = function() {
+    this.container.unbind('click', this.enhance);
   };
 }

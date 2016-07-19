@@ -23,6 +23,9 @@ function StitchIt() {
 
     $(document).keyup(function(e){
       if(e.keyCode === 27) {
+        $.each(self.containers, function(index, obj) {
+          obj.destroy();
+        });
         self.containers = [];
       }
     });
